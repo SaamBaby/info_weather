@@ -308,12 +308,31 @@ class _HomeState extends State<Home> {
                                       ),
                                     ),
                                   ),
-                                  Text("81 %",style: GoogleFonts.nunito(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w700
+                                  RichText(
+                                    text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text:   loadedData.main.humidity.toString(),
+                                            style:  GoogleFonts.montserrat(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                height: 1,
+                                                fontWeight: FontWeight.w500
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: "%",
+                                            style: GoogleFonts.montserrat(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                height: 1,
+                                                fontWeight: FontWeight.w500
+                                            ),
+                                          )
+                                        ]
+                                    ),
                                   ),
-                                  )
+
                                 ],
                               ),
                               Column(
@@ -334,11 +353,30 @@ class _HomeState extends State<Home> {
                                       ),
                                     ),
                                   ),
-                                  Text("1041 hPa",style: GoogleFonts.nunito(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w700
-                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text:   loadedData.main.pressure.toString(),
+                                            style:  GoogleFonts.montserrat(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                height: 1,
+                                                fontWeight: FontWeight.w500
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: " hPa",
+                                            style: GoogleFonts.montserrat(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                height: 1,
+                                                fontWeight: FontWeight.w500
+                                            ),
+                                          )
+                                        ]
+                                    ),
+
                                   )
                                 ],
                               ),
