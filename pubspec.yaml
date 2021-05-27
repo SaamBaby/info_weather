@@ -1,0 +1,36 @@
+name: info_weather
+description: A new Flutter application.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.1
+  geolocator: any
+  google_fonts:
+  http: any
+  provider: any
+  flutter_svg: any
+  json_annotation: 3.1.1
+  google_maps_flutter: any
+
+dev_dependencies:
+  build_runner: any
+  json_serializable: 3.5.1
+  flutter_test:
+    sdk: flutter
+
+#
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/weather/
+    - assets/
+
+
