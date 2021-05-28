@@ -1,10 +1,13 @@
 README 
  ### Notes  
-No important notes that to be aware of, just a simple application that ###tells the weather.For your convenience I am attaching a screenshot of all the pages
+No important notes that to be aware of, just a simple application that show the weather.For your
+ convenience I am attaching a screenshot of all the pages
+ 
  ### Date 
 27-May-2021
 ### Time spent
-I spend  3and half hours yesterday (26-May-2021)  from 10:00 to ###1:45  making the  UI screens in Figma and went through the open ###weather API  and came up with the possible challenges while ###developing the application. And from morning 7 30 – 1:00, I worked on ###the API calls, JSON serialization, and backend Logic. Followed by  6 hours from 3 to 9 developing the front-end and database. So all together around 10 to 11 hours in total.
+I spend  3 and half hours yesterday (26-May-2021)  from 10:00 to 1:45  making the  UI screens in
+ Figma and went through the open weather API  and came up with the possible challenges while developing the application. And from morning 7 30 – 1:00, I worked on the API calls, JSON serialization, and backend Logic. Followed by  6 hours from 3 to 9 developing the front-end and database. So all together around 10 to 11 hours in total.
 ### Assumptions made 
 One of the worst assumptions I made yesterday was that  I could be easily satisfied with the UI on my first try and won't have to redo it again so that I could concentrate more on the functionality and more testing. But it turned out to be the biggest mistake that cost me a lot of time.
 ### Shortcuts/Compromises

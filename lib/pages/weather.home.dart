@@ -11,6 +11,7 @@ import 'package:info_weather/models/weather/response.weather.dart';
 import 'package:info_weather/pages/user.favorite.dart';
 import 'package:info_weather/providers/weather.api.provider.dart';
 import 'package:info_weather/utils/address.data.search.dart';
+import 'package:info_weather/utils/weather.icon.widget.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:uuid/uuid.dart';
@@ -33,7 +34,7 @@ class _HomeState extends State<Home> {
     target: LatLng(43.653225, -79.383186),
     zoom: 14.4746,
   );
-
+  WeatherIcon _weatherIcon=WeatherIcon();
   @override
   void initState() {
     rootBundle.loadString('assets/map_style.txt').then((string) {
@@ -76,8 +77,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     var loadedData = Provider.of<WeatherApiProvider>(context).responseWeather;
     var size = MediaQuery.of(context).size;
-    return (!isLoaded)
-        ? Container(
+    if ((!isLoaded)) {
+      return Container(
             color: Colors.white,
             width: size.width,
             height: size.height,
@@ -85,8 +86,9 @@ class _HomeState extends State<Home> {
                 child: new CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
             )),
-          )
-        : SafeArea(
+          );
+    } else {
+      return SafeArea(
             child: Scaffold(
               appBar: AppBar(
                 automaticallyImplyLeading: false,
@@ -163,10 +165,21 @@ class _HomeState extends State<Home> {
                             Positioned(
                                 top: 50,
                                 left: 50,
-                                child: SvgPicture.asset(
-                                  'assets/weather/001lighticons-08.svg',
-                                  height: 250,
-                                  width: 250,
+                                child: GestureDetector(
+                                  onTap: (){
+                                    _weatherIcon.getIcon(loadedData.weather
+                                        .first.id, loadedData.weather.first
+                                        .icon);
+
+
+                                  },
+                                  child: SvgPicture.asset(
+                                    _weatherIcon.getIcon(loadedData.weather
+                                        .first.id, loadedData.weather.first
+                                        .icon),
+                                    height: 250,
+                                    width: 250,
+                                  ),
                                 )),
                             Positioned(
                               top: 100,
@@ -504,5 +517,6 @@ class _HomeState extends State<Home> {
               ),
             ),
           );
+    }
   }
 }

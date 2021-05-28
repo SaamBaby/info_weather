@@ -12,6 +12,7 @@ import 'package:info_weather/models/place/user.favorite.dart';
 import 'package:info_weather/models/weather/response.weather.dart';
 import 'package:info_weather/pages/weather.home.dart';
 import 'package:info_weather/providers/weather.api.provider.dart';
+import 'package:info_weather/utils/weather.icon.widget.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:uuid/uuid.dart';
@@ -30,6 +31,7 @@ class _SearchResultState extends State<SearchResult> {
   bool _isFavorite = false;
   String mapStyle;
   var dbHelper = FavoriteDbHelper();
+  WeatherIcon _weatherIcon=WeatherIcon();
   PlaceApiHelper placeApiHelper;
   ResponseWeather responseWeather = ResponseWeather();
   LatLng  coordinates;
@@ -213,7 +215,9 @@ class _SearchResultState extends State<SearchResult> {
                         top: 50,
                         left: 50,
                         child: SvgPicture.asset(
-                          'assets/weather/001lighticons-08.svg',
+                          _weatherIcon.getIcon(loadedData.weather
+                              .first.id, loadedData.weather.first
+                              .icon),
                           height: 250,
                           width: 250,
                         )),
