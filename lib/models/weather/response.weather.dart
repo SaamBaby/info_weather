@@ -1,9 +1,9 @@
 
 
-import 'package:info_weather/models/weather.dart';
-import 'package:info_weather/models/weather.main.dart';
-import 'package:info_weather/models/weather.sys.dart';
-import 'package:info_weather/models/weather.wind.dart';
+import 'package:info_weather/models/weather/weather.dart';
+import 'package:info_weather/models/weather/weather.main.dart';
+import 'package:info_weather/models/weather/weather.sys.dart';
+import 'package:info_weather/models/weather/weather.wind.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'response.weather.g.dart';
