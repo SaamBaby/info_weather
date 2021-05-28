@@ -62,6 +62,10 @@ class _SearchResultState extends State<SearchResult> {
          setState(() {
        _isFavorite= true;
          });
+
+         setState(() {
+
+         });
         }
       })
     });

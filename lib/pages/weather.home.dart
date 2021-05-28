@@ -8,6 +8,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:info_weather/models/weather/response.weather.dart';
+import 'package:info_weather/pages/user.favorite.dart';
 import 'package:info_weather/providers/weather.api.provider.dart';
 import 'package:info_weather/utils/address.data.search.dart';
 import 'package:intl/intl.dart';
@@ -480,7 +481,11 @@ class _HomeState extends State<Home> {
                                                       Radius.circular(10)),
                                               color: Colors.black),
                                           child: IconButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.of(context).push
+                                                (MaterialPageRoute(builder:
+                                              (context)=>UserFavorites()));
+                                            },
                                             icon: Icon(
                                               Icons.person_rounded,
                                               size: 22,
